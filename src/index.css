@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+li,
+a,
+button,
+input, textarea {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
+input, textarea, select {
+  background-color: inherit;
+  border: none;
+  outline: none;
+}
+
+a,
+input {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.body {
+  margin: 0 auto;
+  width: calc(100vw - 2rem);
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 0.75rem 0;
+  background-color: aqua;
+}
