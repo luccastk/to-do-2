@@ -2,7 +2,7 @@ import React from "react";
 import { FaPlus } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
-import BaseIcon from "../../components/Base/BaseIcon";
+import BaseIcon from "../../components/Base/BaseIcon/BaseIcon";
 import styles from "./Reminders.module.scss";
 
 const Reminders = () => {
@@ -12,7 +12,9 @@ const Reminders = () => {
     <div className={styles.main}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <span className={styles["header-title"]}>New ReminderNew ReminderNew ReminderNew ReminderNew Reminder</span>
+          <span className={styles["header-title"]}>
+            New ReminderNew ReminderNew ReminderNew ReminderNew Reminder
+          </span>
           <span className={styles.header__notification}>10</span>
         </div>
         <div>
@@ -90,13 +92,13 @@ const Reminders = () => {
           </div>
           <div className={styles.drawer__items}>
             <span>Tags</span>
-            <div style={{display: "flex"}}>
+            <div style={{ display: "flex" }}>
               <ul>
                 <li>tag</li>
               </ul>
               <button>
                 <BaseIcon>
-                  <FaPlus size={".75rem"}/>
+                  <FaPlus size={".75rem"} />
                 </BaseIcon>
                 <span>Add Tag</span>
               </button>

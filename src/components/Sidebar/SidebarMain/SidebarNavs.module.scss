@@ -1,0 +1,19 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 120px;
+  overflow: auto;
+  scrollbar-width: thin;
+  padding-right: 1rem;
+
+  &--collapsed {
+    padding-right: 1.925rem;
+  }
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

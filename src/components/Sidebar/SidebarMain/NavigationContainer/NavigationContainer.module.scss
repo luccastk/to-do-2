@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title {
+  opacity: 1;
+  flex: 1;
+  transition: all 0.3s ease-out;
+
+  &--collapsed {
+    opacity: 0;
+    flex: 0;
+    transition: all 0.3s ease;
+  }
+}

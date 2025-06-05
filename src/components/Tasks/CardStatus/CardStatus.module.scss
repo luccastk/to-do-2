@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.label {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: #000;
+    width: .35rem;
+    height: .35rem;
+    border-radius: .5rem;
+    left: -.75rem;
+    top: .45rem;
+  }
+}

@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Sidebar } from "./components";
+import { Sidebar } from "./components/index";
 import "./index.css";
 import { Home, Reminder, Reminders, StickyWall } from "./pages";
 
