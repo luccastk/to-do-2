@@ -45,22 +45,3 @@ ul,
 li {
   list-style: none;
 }
-
-.body {
-  margin: 0 auto;
-  width: calc(100vw - 2rem);
-}
-
-.container {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  padding: 0.75rem 0;
-  background-color: aqua;
-}
-
-.ellipsis {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}

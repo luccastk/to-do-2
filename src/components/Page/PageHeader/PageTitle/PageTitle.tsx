@@ -4,10 +4,14 @@ type PageTitleProps = {
   title: string;
 };
 
-const PageTitle = ({ title }: PageTitleProps) => {
+const PageTitle = ({
+  title,
+  children,
+}: React.PropsWithChildren<PageTitleProps>) => {
   return (
-    <div className={styles.title}>
-      <span>{title}</span>
+    <div className={styles.container}>
+      <span className={`ellipsis ${styles.title}`}>{title}</span>
+      {children}
     </div>
   );
 };

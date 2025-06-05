@@ -13,7 +13,7 @@ const BaseIcon = ({ children }: React.PropsWithChildren) => {
         },
       }}
     >
-      {children}
+      <div>{children}</div>
     </IconContext>
   );
 };

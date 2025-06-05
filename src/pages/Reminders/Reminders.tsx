@@ -1,8 +1,9 @@
 import React from "react";
 import { FaPlus } from "react-icons/fa";
-import { IoIosArrowForward } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import BaseIcon from "../../components/Base/BaseIcon/BaseIcon";
+import { PageTitle } from "../../components/Page";
+import { ReminderInputCreate, ReminderList } from "../../components/Reminder";
 import styles from "./Reminders.module.scss";
 
 const Reminders = () => {
@@ -11,37 +12,14 @@ const Reminders = () => {
   return (
     <div className={styles.main}>
       <div className={styles.container}>
-        <div className={styles.header}>
-          <span className={styles["header-title"]}>
-            New ReminderNew ReminderNew ReminderNew ReminderNew Reminder
-          </span>
+        <PageTitle
+          title={"New ReminderNew ReminderNew ReminderNew ReminderNew Reminder"}
+        >
           <span className={styles.header__notification}>10</span>
-        </div>
+        </PageTitle>
         <div>
-          <div className={styles.reminder__input}>
-            <button>
-              <BaseIcon>
-                <FaPlus />
-              </BaseIcon>
-            </button>
-            <input type="text" placeholder="Add New Task" />
-          </div>
-          <ul>
-            <li>
-              <button
-                onClick={() => setShowModal((prev) => !prev)}
-                className={styles.reminder__button}
-              >
-                <div style={{ display: "flex", gap: "1rem" }}>
-                  <input type="checkbox" />
-                  <span>Reminder - 1</span>
-                </div>
-                <BaseIcon>
-                  <IoIosArrowForward />
-                </BaseIcon>
-              </button>
-            </li>
-          </ul>
+          <ReminderInputCreate variant="withButton" />
+          <ReminderList handleClick={() => setShowModal((prev) => !prev)} />
         </div>
       </div>
       <div

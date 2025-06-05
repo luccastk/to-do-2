@@ -1,0 +1,23 @@
+:root {
+  --font-sm: 1rem;
+  --font-m: 1.5rem;
+  --font-l: 3.625rem;
+}
+
+.t-title {
+  font-size: var(--font-l);
+}
+
+.t-subtitle {
+  font-size: var(--font-m);
+}
+
+.t-body {
+  font-size: var(--font-sm);
+}
+
+.t-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

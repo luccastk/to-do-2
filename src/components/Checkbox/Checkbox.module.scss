@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.checkbox {
+  appearance: none;
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-s);
+
+  &:hover {
+    background-color: var(--color-bg-secundary);
+  }
+
+  &:checked {
+    background-color: var(--color-bg-secundary);
+  }
+}
+
+.checkmark {
+  position: absolute;
+
+  &::before {
+    display: none;
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 14px;
+    bottom: -4px;
+    left: 13px;
+    background-color: #ffc125;
+    animation: slideInX .6s forwards;
+  }
+  
+  &::after {
+    display: none;
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 8px;
+    top: -4px;
+    left: 6px;
+    background-color: #ffc125;
+    animation: slideInNegX .6s forwards;
+  }
+}
+
+.container .checkbox:checked ~ .checkmark::before,
+.container .checkbox:checked ~ .checkmark::after {
+  display: block;
+}
+
+.container .checkbox:checked ~ .circle::after {
+  display: block;
+}
+
+@keyframes slideInX {
+  from {
+    transform: translate3d(10px, -10px, -20px) rotate(45deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0) rotate(45deg);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInNegX {
+  from {
+    transform: translate3d(-10px, -10px, -20px) rotate(-45deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0) rotate(-45deg);
+    opacity: 1;
+  }
+}

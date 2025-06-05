@@ -42,9 +42,7 @@ const SidebarNavigation = ({ isCollapsed }: SidebarNavigationProps) => {
         {sideNav.map((item) => (
           <li key={item.id}>
             <Link to={item.href} className={styles_main["list-item"]}>
-              <div>
-                <BaseIcon>{item.icon}</BaseIcon>
-              </div>
+              <BaseIcon>{item.icon}</BaseIcon>
               <span className="ellipsis">{item.label}</span>
             </Link>
           </li>

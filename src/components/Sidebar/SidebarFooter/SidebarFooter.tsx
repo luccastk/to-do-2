@@ -27,9 +27,7 @@ const SidebarFooter = () => {
     <div className={styles.container}>
       {footerItems.map((item) => (
         <div key={item.id} className={styles["icon-label"]}>
-          <div>
-            <BaseIcon>{item.icon}</BaseIcon>
-          </div>
+          <BaseIcon>{item.icon}</BaseIcon>
           <span>{item.label}</span>
         </div>
       ))}

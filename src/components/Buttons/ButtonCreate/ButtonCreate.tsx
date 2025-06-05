@@ -10,12 +10,10 @@ type ButtonCreateProps = {
 const ButtonCreate = ({ label, handleCreate }: ButtonCreateProps) => {
   return (
     <button onClick={handleCreate} className={styles.container}>
-      <div>
-        <BaseIcon>
-          <FaPlus />
-        </BaseIcon>
-      </div>
-      <span className="ellipsis">{label}</span>
+      <BaseIcon>
+        <FaPlus />
+      </BaseIcon>
+      {label && <span className="ellipsis">{label}</span>}
     </button>
   );
 };
