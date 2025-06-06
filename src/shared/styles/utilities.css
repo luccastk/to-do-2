@@ -1,19 +1,43 @@
-:root {
-  --font-sm: 1rem;
-  --font-m: 1.5rem;
-  --font-l: 3.625rem;
+.text-lg {
+  font-weight: var(--f-weigh-600);
+  font-size: var(--f-size-lg);
+  line-height: var(--l-heigh-lg);
+  color: var(--c-black-contrast-0);
 }
 
-.t-title {
-  font-size: var(--font-l);
+.text-md {
+  font-weight: var(--f-weigh-600);
+  font-size: var(--font-size-md);
+  line-height: var(--l-heigh-md);
+  color: var(--c-black-contrast-10);
 }
 
-.t-subtitle {
-  font-size: var(--font-m);
+.text-sm {
+  font-weight: var(--f-weigh-600);
+  font-size: var(--f-size-sm);
+  line-height: var(--l-heigh-sm);
+  color: var(--c-black-contrast-10);
 }
 
-.t-body {
-  font-size: var(--font-sm);
+.text-mds {
+  font-weight: var(--f-weigh-400);
+  font-size: var(--f-size-mds);
+  line-height: var(--l-heigh-mds);
+  color: var(--c-black-contrast-10);
+}
+
+.t-muted {
+  font-weight: var(--f-weigh-400);
+  font-size: var(--f-size-mds);
+  line-height: var(--l-heigh-mds);
+  color: var(--c-black-contrast-20);
+}
+
+.t-bold {
+  font-weight: var(--f-weigh-600);
+  font-size: var(--f-size-mds);
+  line-height: var(--l-heigh-mds);
+  color: var(--c-black-contrast-10);
 }
 
 .t-ellipsis {

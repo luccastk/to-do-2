@@ -1,0 +1,14 @@
+.container {
+  align-self: flex-start;
+  position: relative;
+}
+
+.bagde__dot {
+  position: absolute;
+  padding: 0.25rem;
+  content: "";
+  bottom: 1.5rem;
+  left: 1.315rem;
+  background-color: aqua;
+  border-radius: 1rem;
+}

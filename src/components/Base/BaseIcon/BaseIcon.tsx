@@ -1,11 +1,15 @@
 import React from "react";
 import { IconContext } from "react-icons";
 
-const BaseIcon = ({ children }: React.PropsWithChildren) => {
+type BaseIconProps = {
+  icon: React.ReactNode;
+};
+
+const BaseIcon = ({ icon }: BaseIconProps) => {
   return (
     <IconContext
       value={{
-        size: "1rem",
+        size: "1.5rem",
         style: {
           display: "flex",
           alignItems: "center",
@@ -13,7 +17,7 @@ const BaseIcon = ({ children }: React.PropsWithChildren) => {
         },
       }}
     >
-      <div>{children}</div>
+      <div>{icon}</div>
     </IconContext>
   );
 };

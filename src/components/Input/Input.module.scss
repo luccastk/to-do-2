@@ -1,0 +1,14 @@
+.container {
+  position: relative;
+  display: grid;
+  flex-direction: column;
+
+  & input {
+    color: var(--c-black-contrast-0);
+  }
+}
+
+.label {
+  width: 100%;
+  position: absolute;
+}

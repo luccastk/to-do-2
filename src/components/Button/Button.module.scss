@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+.default {
+  background-color: var(--c-bg-pri);
+  border: 1px solid var(--c-border);
+}
+
+.save {
+  background-color: var(--c-yellow);
+}
+
+.add {
+  background-color: var(--c-bg-sec);
+}
