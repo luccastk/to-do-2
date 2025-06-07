@@ -26,21 +26,21 @@
   color: var(--c-black-contrast-10);
 }
 
-.t-muted {
+.text-muted {
   font-weight: var(--f-weigh-400);
   font-size: var(--f-size-mds);
   line-height: var(--l-heigh-mds);
   color: var(--c-black-contrast-20);
 }
 
-.t-bold {
+.text-bold {
   font-weight: var(--f-weigh-600);
   font-size: var(--f-size-mds);
   line-height: var(--l-heigh-mds);
   color: var(--c-black-contrast-10);
 }
 
-.t-ellipsis {
+.text-ellipsis {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

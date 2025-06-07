@@ -1,10 +1,9 @@
 .container {
+  width: 100%;
   position: relative;
-  display: grid;
-  flex-direction: column;
 
   & input {
-    color: var(--c-black-contrast-0);
+    width: 100%;
   }
 }
 

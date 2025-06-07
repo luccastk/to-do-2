@@ -27,7 +27,7 @@ export default function Input({
   }
 
   return (
-    <div className={`t-ph ${styles.container}`}>
+    <div className={`text-muted ${styles.container}`}>
       {value.trim() === "" ? (
         <label htmlFor={id} className={styles.label}>
           {placeholder}
@@ -41,7 +41,7 @@ export default function Input({
         name={id}
         value={value}
         required={required}
-        className="t-ph"
+        className="text-mds"
         onChange={(e) => handleChange(e)}
         onKeyDown={handleKeydDown}
       />

@@ -1,5 +1,5 @@
 import React from "react";
-import { BaseIcon } from "../Base";
+import Icon from "../Icon/Icon";
 import styles from "./Button.module.scss";
 
 type ButtonProps = {
@@ -13,7 +13,6 @@ type ButtonProps = {
 export function Button({
   icon,
   label,
-  buttonColor,
   variant = "default",
   handleClick,
 }: ButtonProps) {
@@ -27,7 +26,7 @@ export function Button({
       onClick={onClick}
       className={`${styles.container} ${variant && styles[`${variant}`]}`}
     >
-      {icon && <BaseIcon>{icon}</BaseIcon>}
+      {icon && <Icon icon={icon} />}
       {label && <span className="t-b">{label}</span>}
     </button>
   );

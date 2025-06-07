@@ -1,0 +1,14 @@
+.container {
+  width: 280px;
+  padding: 1rem;
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

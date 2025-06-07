@@ -21,7 +21,7 @@ export default function Typography({ text, component = "p" }: TypographyProps) {
 
   return React.createElement(
     component,
-    { className: `ellipsis ${styles}` },
+    { className: `text-ellipsis ${styles}` },
     text
   );
 }
