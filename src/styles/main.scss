@@ -1,3 +1,5 @@
+@use "./tokens/index" as *;
+
 * {
   box-sizing: border-box;
 }
@@ -40,6 +42,7 @@ select {
 
 a,
 input {
+  font-family: inherit;
   text-decoration: none;
   color: inherit;
 }
@@ -47,4 +50,21 @@ input {
 ul,
 li {
   list-style: none;
+}
+
+body {
+  font-family: $font-family-primary;
+  background-color: $white-0;
+}
+
+.body {
+  margin: 0 auto;
+  width: calc(100vw - 2rem);
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  padding: $space-sm 0;
+  overflow: hidden;
 }

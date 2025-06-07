@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home, Reminder, Reminders, StickyWall } from "./pages";
+import { Home } from "./pages";
 
 function App() {
   return (
@@ -8,9 +8,6 @@ function App() {
         <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/reminders" element={<Reminders />} />
-            <Route path="/reminders/:id" element={<Reminder />} />
-            <Route path="/stickies" element={<StickyWall />} />
           </Routes>
         </div>
       </div>

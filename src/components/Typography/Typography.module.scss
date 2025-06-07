@@ -1,0 +1,59 @@
+@use "../../styles/tokens/index" as *;
+
+.default {
+  font-size: $font-size-md;
+  line-height: $line-height-md;
+  color: $black-100;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.primary {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-600;
+  line-height: $line-height-xl;
+  color: $black-0;
+}
+
+.secundary {
+  font-size: $font-size-ls;
+  font-weight: $font-weight-600;
+  line-height: $line-height-ls;
+  color: $black-100;
+}
+
+.lh-lg {
+  line-height: $line-height-lg;
+}
+
+.lh-xs {
+  line-height: $line-height-xs;
+}
+
+.weight-400 {
+  font-weight: $font-weight-400;
+}
+
+.weight-600 {
+  font-weight: $font-weight-600;
+}
+
+.weight-700 {
+  font-weight: $font-weight-700;
+}
+
+.small {
+  font-size: $font-size-xs;
+}
+
+.medium {
+  font-size: $font-size-lg;
+}
+
+.muted {
+  color: $black-200;
+}
+
+.bold {
+  font-weight: $font-weight-700;
+}

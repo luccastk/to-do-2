@@ -1,46 +1,36 @@
 import styles from "./Badge.module.scss";
 
-type BagdeProps = {
-  icon?: React.ReactNode;
-  badgeContent: number | string;
-  variant?: "default" | "dot";
-  max?: number;
+type Variant = "default" | "large";
+
+type BadgeProps = {
+  badgeContent: string | number;
+  variant?: Variant;
+  backgrounColor?: string;
 };
 
-export default function Bagde({
-  icon,
-  variant = "default",
+export default function Badge({
   badgeContent,
-  max,
-}: BagdeProps) {
-  function verifyIntegrity() {
-    if (isNaN(parseInt(badgeContent.toString()))) {
-      return 0;
-    } else if (badgeContent.toString().trim() === "") {
-      return 0;
-    } else {
-      return parseInt(badgeContent.toString());
-    }
-  }
+  variant = "default",
+  backgrounColor,
+}: BadgeProps) {
+  const badgeFormated = () => {
+    const numberFormat = parseInt(badgeContent.toString().trim());
 
-  const badge = () => {
-    if (max && verifyIntegrity() > max) {
-      return max;
-    } else if (badgeContent && verifyIntegrity() > 0) return badgeContent;
+    if (isNaN(numberFormat) || badgeContent.toString() === "") {
+      return 0;
+    }
+
+    return numberFormat;
   };
 
-  return (
-    <div className={styles.container}>
-      {icon}
-      <span
-        className={`
-          ${verifyIntegrity() > 0 ? styles.badge : ""} ${
-          variant === "dot" ? styles.bagde__dot : ""
-        }   
-        text-sm`}
-      >
-        {variant === "dot" ? "" : badge()}
-      </span>
-    </div>
+  return badgeFormated() > 0 ? (
+    <span
+      style={{ backgroundColor: backgrounColor }}
+      className={`${styles.default} ${variant === "large" ? styles.large : ""}`}
+    >
+      {badgeFormated()}
+    </span>
+  ) : (
+    ""
   );
 }

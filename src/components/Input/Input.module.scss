@@ -1,13 +1,32 @@
-.container {
-  width: 100%;
-  position: relative;
+@use "../../styles/tokens/index" as *;
 
-  & input {
-    width: 100%;
-  }
+.default {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: $gap-md;
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: $border-radius-md;
+  padding: $padding-sm;
+}
+
+.outlined {
+  border: 1px solid $white-300;
+}
+
+.input {
+  width: 100%;
+  font-size: $font-size-md;
+  font-weight: $font-weight-400;
+  line-height: $line-height-md;
 }
 
 .label {
   width: 100%;
   position: absolute;
+  font-size: $font-size-md;
+  font-weight: $font-weight-400;
+  line-height: $line-height-md;
+  color: $black-200;
 }

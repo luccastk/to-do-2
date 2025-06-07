@@ -1,18 +1,25 @@
 import React from "react";
 import styles from "./Input.module.scss";
+import Icon from "../Icon/Icon";
+
+type Variant = "default" | "outlined";
 
 type InputProps = {
   id: string;
+  icon?: React.ReactNode;
+  variant?: Variant;
   placeholder?: string;
   value: string;
   type?: string;
   required?: boolean;
-  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleChange: (value: string) => void;
   onKeyDownEnter?: () => void;
 } & React.ComponentProps<"input">;
 
 export default function Input({
   id,
+  icon,
+  variant = "default",
   placeholder,
   value,
   type = "text",
@@ -27,24 +34,31 @@ export default function Input({
   }
 
   return (
-    <div className={`text-muted ${styles.container}`}>
-      {value.trim() === "" ? (
-        <label htmlFor={id} className={styles.label}>
-          {placeholder}
-        </label>
-      ) : (
-        ""
-      )}
-      <input
-        type={type}
-        id={id}
-        name={id}
-        value={value}
-        required={required}
-        className="text-mds"
-        onChange={(e) => handleChange(e)}
-        onKeyDown={handleKeydDown}
-      />
+    <div
+      className={`${styles.default} ${
+        variant === "outlined" ? styles.outlined : ""
+      }`}
+    >
+      {icon && <Icon icon={icon} />}
+      <div style={{flex: "1"}}>
+        {value.trim() === "" ? (
+          <label htmlFor={id} className={styles.label}>
+            {placeholder}
+          </label>
+        ) : (
+          ""
+        )}
+        <input
+          type={type}
+          id={id}
+          name={id}
+          value={value}
+          required={required}
+          onChange={(e) => handleChange(e.currentTarget.value)}
+          onKeyDown={handleKeydDown}
+          className={styles.input}
+        />
+      </div>
     </div>
   );
 }

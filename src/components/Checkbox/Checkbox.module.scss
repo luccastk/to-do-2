@@ -1,4 +1,14 @@
+@use "../../styles/tokens/index" as *;
+
 .container {
+  display: flex;
+  align-items: center;
+  gap: $gap-md;
+  padding: $padding-sm;
+  min-width: 0;
+}
+
+.content {
   display: flex;
   align-items: center;
   position: relative;
@@ -9,16 +19,16 @@
   cursor: pointer;
   width: 1rem;
   height: 1rem;
-  background-color: var(--color-bg-primary);
-  border: 1px solid #000;
-  border-radius: var(--border-radius-s);
+  background-color: inherit;
+  border: 1px solid $white-300;
+  border-radius: $border-radius-sm;
 
   &:hover {
-    background-color: var(--color-bg-secundary);
+    background-color: $white-200;
   }
 
   &:checked {
-    background-color: var(--color-bg-secundary);
+    background-color: $white-100;
   }
 }
 
@@ -33,7 +43,7 @@
     height: 14px;
     bottom: -4px;
     left: 13px;
-    background-color: #ffc125;
+    background-color: $yellow-0;
     animation: slideInX 0.6s forwards;
   }
 
@@ -45,17 +55,13 @@
     height: 8px;
     top: -4px;
     left: 6px;
-    background-color: #ffc125;
+    background-color: $yellow-0;
     animation: slideInNegX 0.6s forwards;
   }
 }
 
 .container .checkbox:checked ~ .checkmark::before,
 .container .checkbox:checked ~ .checkmark::after {
-  display: block;
-}
-
-.container .checkbox:checked ~ .circle::after {
   display: block;
 }
 

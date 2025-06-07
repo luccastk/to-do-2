@@ -1,12 +1,10 @@
 import { IconContext } from "react-icons";
-import styles from "./Icon.module.scss";
 
 type IconProps = {
-  icon?: React.ReactNode;
-  color?: string;
+  icon: React.ReactNode;
 };
 
-export default function Icon({ icon, color }: IconProps) {
+export default function Icon({ icon }: IconProps) {
   return (
     <IconContext
       value={{
@@ -18,9 +16,7 @@ export default function Icon({ icon, color }: IconProps) {
         },
       }}
     >
-      <div className={styles.icon} style={{ backgroundColor: color }}>
-        {icon ? icon : ""}
-      </div>
+      <div>{icon}</div>
     </IconContext>
   );
 }

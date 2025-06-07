@@ -1,21 +1,25 @@
-.container {
+@use "../../styles/tokens/index" as *;
+
+.button {
+  font-family: $font-family-primary;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: $gap-sm;
   padding: 0.5rem 2rem;
-  border-radius: 5px;
+  border-radius: $border-radius-sm;
   border: 1px solid transparent;
 }
 
-.default {
-  background-color: var(--c-bg-pri);
-  border: 1px solid var(--c-border);
+.primary {
+  background-color: $white-200;
+  padding: $padding-xs $padding-sm;
 }
 
-.save {
-  background-color: var(--c-yellow);
+.secundary {
+  background-color: $yellow-0;
 }
 
-.add {
-  background-color: var(--c-bg-sec);
+.outlined {
+  background-color: $white-100;
+  border-color: $white-300;
 }

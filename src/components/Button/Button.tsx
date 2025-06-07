@@ -2,20 +2,22 @@ import React from "react";
 import Icon from "../Icon/Icon";
 import styles from "./Button.module.scss";
 
+type Variant = "primary" | "secundary" | "outlined";
+
 type ButtonProps = {
   icon?: React.ReactNode;
   label?: string;
   buttonColor?: string;
-  variant: "default" | "save" | "delete" | "add";
+  variant?: Variant;
   handleClick?: () => void;
 };
 
-export function Button({
+export default function Button({
   icon,
-  label,
-  variant = "default",
+  children,
+  variant = "primary",
   handleClick,
-}: ButtonProps) {
+}: React.PropsWithChildren<ButtonProps>) {
   function onClick(e: React.MouseEvent) {
     e.stopPropagation();
     handleClick?.();
@@ -24,10 +26,10 @@ export function Button({
   return (
     <button
       onClick={onClick}
-      className={`${styles.container} ${variant && styles[`${variant}`]}`}
+      className={`${styles.button} ${variant && styles[`${variant}`]}`}
     >
       {icon && <Icon icon={icon} />}
-      {label && <span className="t-b">{label}</span>}
+      {children}
     </button>
   );
 }
