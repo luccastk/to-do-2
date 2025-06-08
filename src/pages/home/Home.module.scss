@@ -1,0 +1,17 @@
+@use "../../styles/tokens" as *;
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.newButton {
+  background-color: #d02;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.efeito {
+  opacity: 0;
+  transition: all 0.3s ease;
+}

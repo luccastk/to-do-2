@@ -1,0 +1,34 @@
+{
+  "color": {
+    "background": {
+      "primary": { "value": "#fafafa" },
+      "secundary": { "value": "#f4f4f4" },
+      "tertiary": { "value": "#ebebeb" }
+    },
+    "body": {
+      "title": { "value": "#212529" },
+      "text": { "value": "#444444" },
+      "placeholder": { "value": "#7c7c7c" }
+    },
+    "pink": {
+      "0": { "value": "#ff6b6b" }
+    },
+    "purple": {
+      "0": { "value": "#da77f2" },
+      "1": { "value": "#9775fa" }
+    },
+    "blue": {
+      "0": { "value": "#5c7cfa" },
+      "1": { "value": "#66d9e8" }
+    },
+    "green": {
+      "0": { "value": "#8ce99a" }
+    },
+    "yellow": {
+      "0": { "value": "#ffd43b" }
+    },
+    "orange": {
+      "0": { "value": "#ff922b" }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "size": {
+    "font": {
+      "text": { "value": "1rem" },
+      "title": {
+        "0": { "value": "3rem" },
+        "1": { "value": "2.5rem" }
+      },
+      "subtitle": {
+        "0": { "value": "1.5rem" },
+        "1": { "value": "0.75rem" }
+      }
+    }
+  },
+  "line": {
+    "height": {
+      "text": { "value": "1.5rem" },
+      "title": {
+        "0": { "value": "3.5rem" },
+        "1": { "value": "3rem" }
+      },
+      "subtitle": {
+        "0": { "value": "2rem" },
+        "1": { "value": "1rem" }
+      }
+    }
+  },
+  "weight": {
+    "400": { "value": "400" },
+    "600": { "value": "600" },
+    "700": { "value": "700" }
+  },
+  "font": {
+    "familly": {
+      "default": { "value": "'Lexend Deca', sans-serif" }
+    }
+  }
+}

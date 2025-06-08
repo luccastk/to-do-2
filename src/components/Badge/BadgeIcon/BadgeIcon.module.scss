@@ -1,23 +1,23 @@
-@use "../../../styles/tokens/index" as *;
+// @use "../../../styles/tokens/index" as *;
 
-.container {
-  align-self: flex-start;
-  position: relative;
-}
+// .container {
+//   align-self: flex-start;
+//   position: relative;
+// }
 
-.badge {
-  font-size: $font-size-xs;
-  position: absolute;
-  padding: 0 $padding-xs;
-  background-color: aqua;
-  bottom: 1rem;
-  left: 0.75rem;
-  border-radius: $border-radius-md;
-}
+// .badge {
+//   font-size: $font-size-xs;
+//   position: absolute;
+//   padding: 0 $padding-xs;
+//   background-color: aqua;
+//   bottom: 1rem;
+//   left: 0.75rem;
+//   border-radius: $border-radius-md;
+// }
 
-.bagde__dot {
-  padding: $padding-xs;
-  content: "";
-  bottom: 1.25rem;
-  left: 0.85rem;
-}
+// .bagde__dot {
+//   padding: $padding-xs;
+//   content: "";
+//   bottom: 1.25rem;
+//   left: 0.85rem;
+// }

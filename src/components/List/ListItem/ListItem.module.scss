@@ -1,10 +1,10 @@
-@use "../../../styles/tokens/index" as *;
+@use "../../../styles/tokens" as *;
 
 .item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid $white-300;
+  border-top: 1px solid $color-background-tertiary;
 
   &:first-child {
     border: 0;

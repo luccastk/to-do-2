@@ -1,24 +1,19 @@
-@use "../../styles/tokens/index" as *;
+@use "../../styles/tokens" as *;
 
 .button {
-  font-family: $font-family-primary;
-  display: flex;
+  cursor: pointer;
+  display: inline-flex;
   align-items: center;
-  gap: $gap-sm;
-  border-radius: $border-radius-sm;
-  border: 1px solid transparent;
+  gap: $spacing-3;
+  padding: $spacing-1 $spacing-2;
+  border-radius: $radius-sm;
+  background-color: #ed9;
 }
 
-.primary {
-  background-color: $white-200;
-  padding: $padding-xs $padding-sm;
+.left {
+  margin-left: auto;
 }
 
-.secundary {
-  background-color: $yellow-0;
-}
-
-.outlined {
-  background-color: $white-100;
-  border-color: $white-300;
+.right {
+  margin-right: auto;
 }

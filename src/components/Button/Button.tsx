@@ -1,40 +1,31 @@
-import React from "react";
 import Icon from "../Icon/Icon";
 import styles from "./Button.module.scss";
-
-type Variant = "default" | "primary" | "secundary" | "outlined";
-
-type ButtonProps = {
-  icon?: React.ReactNode;
-  label?: string;
-  buttonColor?: string;
-  variant?: Variant;
-  handleClick?: () => void;
-} & React.ComponentProps<"button">;
+import type { ButtonProps } from "./Button.types";
 
 export default function Button({
   icon,
+  position = "default",
+  className,
+  onClick,
   children,
-  variant = "default",
-  handleClick,
   ...rest
 }: React.PropsWithChildren<ButtonProps>) {
-  function onClick(e: React.MouseEvent) {
+  function handleClick(e: React.MouseEvent) {
     e.stopPropagation();
-    handleClick?.();
+    onClick();
   }
 
-  const classNames = [styles[variant]];
+  const style: string[] = [];
 
-  if (variant !== "default") classNames.push(styles[`${variant}`]);
+  if (position !== "default") style.push(styles[`${position}`]);
 
   return (
     <button
-      onClick={onClick}
-      className={`${styles.button} ${classNames}`}
       {...rest}
+      onClick={handleClick}
+      className={`${styles.button} ${style.join(" ")} ${className ? className : ""}`}
     >
-      {icon && <Icon icon={icon} />}
+      <Icon icon={icon} />
       {children}
     </button>
   );

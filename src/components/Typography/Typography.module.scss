@@ -1,59 +1,26 @@
-@use "../../styles/tokens/index" as *;
+@use "../../styles/tokens" as *;
 
 .default {
-  font-size: $font-size-md;
-  line-height: $line-height-md;
-  color: $black-100;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: $size-font-text;
+  font-weight: $weight-400;
+  line-height: $line-height-text;
+  color: $color-body-text;
 }
 
-.primary {
-  font-size: $font-size-xl;
-  font-weight: $font-weight-600;
-  line-height: $line-height-xl;
-  color: $black-0;
+.title {
+  font-size: $size-font-title-0;
+  font-weight: $weight-600;
+  line-height: $line-height-title-0;
+  color: $color-body-title;
 }
 
-.secundary {
-  font-size: $font-size-ls;
-  font-weight: $font-weight-600;
-  line-height: $line-height-ls;
-  color: $black-100;
-}
-
-.lh-lg {
-  line-height: $line-height-lg;
-}
-
-.lh-xs {
-  line-height: $line-height-xs;
-}
-
-.weight-400 {
-  font-weight: $font-weight-400;
-}
-
-.weight-600 {
-  font-weight: $font-weight-600;
-}
-
-.weight-700 {
-  font-weight: $font-weight-700;
-}
-
-.small {
-  font-size: $font-size-xs;
-}
-
-.medium {
-  font-size: $font-size-lg;
+.subtitle {
+  font-size: $size-font-subtitle-0;
+  font-weight: $weight-600;
+  line-height: $line-height-subtitle-0;
+  color: $color-body-text;
 }
 
 .muted {
-  color: $black-200;
-}
-
-.bold {
-  font-weight: $font-weight-700;
+  color: $color-body-placeholder;
 }

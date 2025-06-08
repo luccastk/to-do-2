@@ -1,32 +1,19 @@
-@use "../../styles/tokens/index" as *;
+@use "../../styles/tokens" as *;
 
-.default {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: $gap-md;
+.container {
   position: relative;
-  border: 1px solid transparent;
-  border-radius: $border-radius-md;
-  padding: $padding-xs $padding-sm;
+  background-color: antiquewhite;
 }
 
-.outlined {
-  border: 1px solid $white-300;
-}
-
-.input {
+.font {
   width: 100%;
-  font-size: $font-size-md;
-  font-weight: $font-weight-400;
-  line-height: $line-height-md;
+  font-size: $size-font-text;
+  font-weight: $weight-400;
+  line-height: $line-height-text;
+  color: $color-body-text;
 }
 
 .label {
-  width: 100%;
   position: absolute;
-  font-size: $font-size-md;
-  font-weight: $font-weight-400;
-  line-height: $line-height-md;
-  color: $black-200;
+  color: $color-body-placeholder;
 }

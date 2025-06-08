@@ -1,10 +1,7 @@
 import { IconContext } from "react-icons";
+import type { IconProps } from "./Icon.types";
 
-type IconProps = {
-  icon: React.ReactNode;
-};
-
-export default function Icon({ icon }: IconProps) {
+export default function Icon({ icon, className }: IconProps) {
   return (
     <IconContext
       value={{
@@ -16,7 +13,7 @@ export default function Icon({ icon }: IconProps) {
         },
       }}
     >
-      <div>{icon}</div>
+      <div className={className}>{icon}</div>
     </IconContext>
   );
 }

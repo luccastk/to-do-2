@@ -5,9 +5,10 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
-    "baseUrl": "/",
+    "baseUrl": ".",
     "paths": {
-      "@fontsource/lexend-deca": ["types/fontsource.d.ts"]
+      "@fontsource/lexend-deca": ["src/types/fontsource.d.ts"],
+      "@styles/*": ["src/styles/*"]
     }
   }
 }

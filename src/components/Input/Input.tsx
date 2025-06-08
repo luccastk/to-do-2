@@ -1,64 +1,37 @@
-import React from "react";
-import styles from "./Input.module.scss";
 import Icon from "../Icon/Icon";
-
-type Variant = "default" | "outlined";
-
-type InputProps = {
-  id: string;
-  icon?: React.ReactNode;
-  variant?: Variant;
-  placeholder?: string;
-  value: string;
-  type?: string;
-  required?: boolean;
-  handleChange: (value: string) => void;
-  onKeyDownEnter?: () => void;
-} & React.ComponentProps<"input">;
+import styles from "./Input.module.scss";
+import type { InputProps } from "./Input.types";
 
 export default function Input({
   id,
   icon,
-  variant = "default",
+  positionIcon,
   placeholder,
   value,
-  type = "text",
-  required = false,
-  handleChange,
-  onKeyDownEnter,
+  className,
+  ...rest
 }: InputProps) {
-  function handleKeydDown(e: React.KeyboardEvent) {
-    if (e.key === "Enter") {
-      onKeyDownEnter?.();
-    }
-  }
-
   return (
-    <div
-      className={`${styles.default} ${
-        variant === "outlined" ? styles.outlined : ""
-      }`}
-    >
-      {icon && <Icon icon={icon} />}
-      <div style={{ flex: "1" }}>
+    <div className={`${styles.container} ${className ? className : ""}`}>
+      {positionIcon === "left" && icon ? <Icon icon={icon} /> : ""}
+      <div>
         {value.trim() === "" ? (
-          <label htmlFor={id} className={styles.label}>
+          <label htmlFor={id} className={`${styles.font} ${styles.label}`}>
             {placeholder}
           </label>
         ) : (
           ""
         )}
         <input
-          type={type}
+          type="text"
           id={id}
           name={id}
           value={value}
-          required={required}
-          onChange={(e) => handleChange(e.currentTarget.value)}
-          onKeyDown={handleKeydDown}
-          className={styles.input}
+          {...rest}
+          className={`${styles.font}`}
         />
       </div>
+      {positionIcon === "right" && icon ? <Icon icon={icon} /> : ""}
     </div>
   );
 }
