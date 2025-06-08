@@ -15,6 +15,7 @@ type TypographyProps = {
   weight?: Weight;
   lineHeight?: LineHeight;
   muted?: boolean;
+  className?: string;
 };
 
 export default function Typography({
@@ -25,6 +26,7 @@ export default function Typography({
   weight = "400",
   lineHeight,
   muted = false,
+  className,
 }: TypographyProps) {
   const classNames = [styles[variant]];
 
@@ -35,7 +37,7 @@ export default function Typography({
 
   return React.createElement(
     component,
-    { className: `text-ellipsis ${classNames.join(" ")}` },
+    { className: `text-ellipsis ${classNames.join(" ")} ${className}` },
     text
   );
 }

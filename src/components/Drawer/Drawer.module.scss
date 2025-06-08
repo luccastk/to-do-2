@@ -1,0 +1,20 @@
+@use "../../styles/tokens/index" as *;
+
+.drawer {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+  border-radius: $border-radius-md;
+
+  margin-left: auto;
+  transition: width 0.3s ease;
+}
+
+.medium {
+  width: 360px;
+}
+
+.close {
+  width: 0;
+}

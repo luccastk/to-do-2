@@ -1,0 +1,31 @@
+@use "../../styles/tokens/index" as *;
+
+.collaped {
+  width: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+
+  & button {
+    margin: 0;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: $padding-sm $padding-md;
+  padding-bottom: $padding-xs;
+
+  &__button {
+    margin-left: auto;
+
+    &--collapsed {
+      margin: 0;
+    }
+  }
+}
+
+.content {
+  padding: $padding-sm $padding-md;
+}

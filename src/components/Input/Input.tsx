@@ -40,7 +40,7 @@ export default function Input({
       }`}
     >
       {icon && <Icon icon={icon} />}
-      <div style={{flex: "1"}}>
+      <div style={{ flex: "1" }}>
         {value.trim() === "" ? (
           <label htmlFor={id} className={styles.label}>
             {placeholder}

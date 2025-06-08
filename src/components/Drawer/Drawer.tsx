@@ -1,11 +1,24 @@
+import styles from "./Drawer.module.scss";
+
+type Width = "default" | "medium";
+
 type DrawerProps = {
   active?: boolean;
+  width?: Width;
 };
 
-export default function Drawer({ active }: DrawerProps) {
+export default function Drawer({
+  active,
+  width,
+  children,
+}: React.PropsWithChildren<DrawerProps>) {
   return (
     <div
-      style={{ width: `${active ? "280px" : "0"}`, backgroundColor: "#ed0" }}
-    ></div>
+      className={`${styles.drawer} ${active ? "" : styles.close} ${
+        width === "medium" ? styles.medium : ""
+      }`}
+    >
+      {children}
+    </div>
   );
 }

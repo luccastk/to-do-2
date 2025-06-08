@@ -1,13 +1,15 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home } from "./pages";
+import { Sidebar } from "./components";
+import { Home, Task } from "./pages";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="body">
         <div className="container">
+          <Sidebar />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Task />} />
           </Routes>
         </div>
       </div>
