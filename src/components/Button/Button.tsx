@@ -15,16 +15,13 @@ export default function Button({
     onClick();
   }
 
-  const style: string[] = [];
+  const classNames: string[] = [styles.button];
 
-  if (position !== "default") style.push(styles[`${position}`]);
+  if (position !== "default") classNames.push(styles[`${position}`]);
+  if (className) classNames.push(className);
 
   return (
-    <button
-      {...rest}
-      onClick={handleClick}
-      className={`${styles.button} ${style.join(" ")} ${className ? className : ""}`}
-    >
+    <button {...rest} onClick={handleClick} className={classNames.join(" ")}>
       <Icon icon={icon} />
       {children}
     </button>

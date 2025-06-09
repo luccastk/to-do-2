@@ -5,18 +5,23 @@ import type { InputProps } from "./Input.types";
 export default function Input({
   id,
   icon,
-  positionIcon,
+  positionIcon = "left",
   placeholder,
   value,
   className,
   ...rest
 }: InputProps) {
+  const stylesContainer: string[] = [styles.container];
+  const stylesLabel: string[] = [styles.font, styles.label];
+
+  if (className) stylesContainer.push(className);
+
   return (
-    <div className={`${styles.container} ${className ? className : ""}`}>
+    <div className={stylesContainer.join(" ")}>
       {positionIcon === "left" && icon ? <Icon icon={icon} /> : ""}
       <div>
         {value.trim() === "" ? (
-          <label htmlFor={id} className={`${styles.font} ${styles.label}`}>
+          <label htmlFor={id} className={stylesLabel.join(" ")}>
             {placeholder}
           </label>
         ) : (
@@ -28,7 +33,7 @@ export default function Input({
           name={id}
           value={value}
           {...rest}
-          className={`${styles.font}`}
+          className={styles.font}
         />
       </div>
       {positionIcon === "right" && icon ? <Icon icon={icon} /> : ""}

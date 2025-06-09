@@ -36,7 +36,7 @@ export default function Task() {
         }}
       >
         <div style={{ display: "flex", gap: "1rem" }}>
-          <Typography text={"Today"} variant="primary" />
+          <Typography children={"Today"} variant="primary" />
           <Badge badgeContent={"10"} variant="large" />
         </div>
         <div
@@ -61,7 +61,7 @@ export default function Task() {
                 handleChange={() => setChecked((prev) => !prev)}
                 value={checked ? 1 : 0}
               >
-                <Typography text={value} />
+                <Typography children={value} />
               </Checkbox>
               <Icon icon={<IoIosArrowForward />} />
             </ListItem>

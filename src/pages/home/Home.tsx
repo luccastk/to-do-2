@@ -1,7 +1,7 @@
 import React from "react";
 import { FaPlus } from "react-icons/fa";
 import { GiHamburger } from "react-icons/gi";
-import { Button, Input } from "../../components";
+import { Button, Divider, Input, List, ListItem } from "../../components";
 import Typography from "../../components/Typography/Typography";
 import styles from "./Home.module.scss";
 
@@ -23,25 +23,18 @@ export default function Home() {
       <Drawer active={collaped} width="medium">
         <Icon icon={<FaPlus />} />
       </Drawer> */}
-      <Typography text={"muitogrande"} variant="title" />
-      <Typography text={"muitogrande"} variant="subtitle" />
-      <Typography text={"muitogrande"} />
-      <Typography text={"muitogrande"} muted variant="title" />
-      <Typography text={"muitogrande"} muted variant="subtitle" />
-      <Typography
-        text={
-          "muitograndemuitograndemuitograndemuitograndemuitograndemuitograndemuitograndemuitograndemuitograndemuitograndemuitograndemuitograndemuitograndemuitograndemuitograndemuitograndemuitograndemuitograndemuitograndemuitograndemuitogrande"
-        }
-        muted
-        variant="title"
-        className={styles.ellipsis}
-      />
+      <Typography children={"muitogrande"} variant='body' />
+      <Typography children={"muitogrande"} variant= />
+      <Typography children={"muitogrande"} />
+      <Typography children={"muitogrande"} muted />
+      <Typography children={"muitogrande"} muted variant="subtitle" />
+      <Typography>hello world</Typography>
       <div style={{ display: "flex" }}>
         <Button
           icon={<FaPlus color="#7c7c7c" />}
           onClick={() => setCollapsed((prev) => !prev)}
         >
-          <Typography text={"Add New Task"} />
+          <Typography children={"Add New Task"} />
         </Button>
         <Button
           icon={<GiHamburger />}
@@ -51,12 +44,33 @@ export default function Home() {
         />
       </div>
       <Input
+        icon={<FaPlus />}
         id={"name"}
         placeholder="name"
         value={value}
         className={""}
         onChange={(e) => setValue(e.currentTarget.value)}
       />
+      <Divider component="li" variant="middle" />
+
+      <Input
+        icon={<FaPlus />}
+        id={"name"}
+        placeholder="name"
+        value={value}
+        className={""}
+        onChange={(e) => setValue(e.currentTarget.value)}
+      />
+      <List>
+        <ListItem>
+          <Typography>
+            Oi PessoalOi PessoalOi PessoalOi PessoalOi PessoalOi PessoalOi
+            PessoalOi PessoalOi PessoalOi PessoalOi PessoalOi PessoalOi
+            PessoalOi PessoalOi PessoalOi PessoalOi PessoalOi PessoalOi
+            PessoalOi PessoalOi PessoalOi PessoalOi PessoalOi PessoalOi Pessoal
+          </Typography>
+        </ListItem>
+      </List>
     </div>
   );
 }

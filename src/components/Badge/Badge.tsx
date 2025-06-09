@@ -1,12 +1,5 @@
 import styles from "./Badge.module.scss";
-
-type Variant = "default" | "large";
-
-type BadgeProps = {
-  badgeContent: string | number;
-  variant?: Variant;
-  backgrounColor?: string;
-};
+import type { BadgeProps } from "./Badge.types";
 
 export default function Badge({
   badgeContent,

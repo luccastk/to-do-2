@@ -2,7 +2,12 @@
 
 .container {
   position: relative;
-  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  gap: $spacing-4;
+  padding: $spacing-3 $spacing-5;
+  border: 1px solid $color-background-tertiary;
+  border-radius: $radius-md;
 }
 
 .font {

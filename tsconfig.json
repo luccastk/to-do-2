@@ -5,6 +5,7 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
+    "typeRoots": ["src/components/Typography/typography.d.ts"],
     "baseUrl": ".",
     "paths": {
       "@fontsource/lexend-deca": ["src/types/fontsource.d.ts"],

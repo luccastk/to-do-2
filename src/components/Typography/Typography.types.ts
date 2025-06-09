@@ -1,10 +1,13 @@
-type Variant = "default" | "title" | "subtitle";
-type Component = "span" | "h1" | "h2" | "h3" | "p";
+import type { JSX } from "react/jsx-runtime";
+import type { TypographyClass } from "./typography";
+
+type Color = "primary" | "secundary";
 
 export type TypographyProps = {
-  text: string;
-  component?: Component;
-  variant?: Variant;
+  children?: React.ReactNode;
+  variant?:   TypographyClass;
+  color?: Color;
   muted?: boolean;
+  component?: keyof JSX.IntrinsicElements;
   className?: string;
-} & React.ComponentProps<"input">;
+};

@@ -1,0 +1,23 @@
+@use "../../styles/tokens" as *;
+
+.middle {
+  margin-left: $spacing-4;
+  margin-right: $spacing-4;
+}
+
+.default {
+  min-width: 0;
+  margin-top: $spacing-1;
+  margin-bottom: $spacing-1;
+  border: 1px solid $color-background-tertiary;
+}
+
+.vertical {
+  width: 1px;
+  height: 100%;
+
+  &__middle {
+    margin-top: $spacing-2;
+    margin-bottom: $spacing-2;
+  }
+}

@@ -1,24 +1,37 @@
 import React from "react";
 import styles from "./Typography.module.scss";
 import type { TypographyProps } from "./Typography.types";
+import {
+  generateUtilityClass,
+  generateUtilityClasses,
+} from "../../utils/getStyles";
+
+// interface Typography {
+//   h1: string;
+//   body: string;
+//   nowrap: string;
+// }
+
+// type TypographyClassKey = keyof Typography;
+
+// function getTypographyClass(slot: string) {
+//   return generateUtilityClass("typography", slot);
+// }
 
 export default function Typography({
-  text,
-  variant = "default",
+  children,
+  variant = "root",
   component = "span",
   muted,
   className,
 }: TypographyProps) {
-  const classNames = [styles[variant]];
+  // const classes: Typography = generateUtilityClasses("typography", [
+  //   "body",
+  //   "h1",
+  //   "nowrap",
+  // ]);
 
-  if (variant !== "default") classNames.push(styles[`${variant}`]);
-  if (muted) classNames.push(styles.muted);
+  // console.log(getTypographyClass("h1"));
 
-  return React.createElement(
-    component,
-    {
-      className: `text-ellipsis ${classNames.join(" ")} ${className ? className : ""}`,
-    },
-    text
-  );
+  return React.createElement(component, children);
 }

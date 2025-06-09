@@ -1,9 +1,9 @@
-import type { Direction } from "../types";
+import type { Position } from "../types";
 
 export type InputProps = {
   id: string;
   icon?: React.ReactNode;
-  positionIcon?: Extract<Direction, "left" | "right">;
+  positionIcon?: Extract<Position, "left" | "right">;
   placeholder?: string;
   value: string;
   className?: string;
