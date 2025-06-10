@@ -1,26 +1,61 @@
 @use "../../styles/tokens" as *;
 
-.default {
-  font-size: $size-font-text;
-  font-weight: $weight-400;
-  line-height: $line-height-text;
-  color: $color-body-text;
+.inherit {
+  font: inherit;
 }
 
-.title {
-  font-size: $size-font-title-0;
-  font-weight: $weight-600;
-  line-height: $line-height-title-0;
-  color: $color-body-title;
+.h1 {
+  font-size: $text-h1-size;
+  font-weight: $text-h1-weight;
+  line-height: $text-h1-line-height;
+  color: $text-h1-color;
 }
 
-.subtitle {
-  font-size: $size-font-subtitle-0;
-  font-weight: $weight-600;
-  line-height: $line-height-subtitle-0;
-  color: $color-body-text;
+.h2 {
+  font-size: $text-h2-size;
+  font-weight: $text-h2-weight;
+  line-height: $text-h2-line-height;
+  color: $text-h2-color;
+}
+
+.h3 {
+  font-size: $text-h3-size;
+  font-weight: $text-h3-weight;
+  line-height: $text-h3-line-height;
+  color: $text-h3-color;
+}
+
+.h4 {
+  font-size: $text-h4-size;
+  font-weight: $text-h4-weight;
+  line-height: $text-h4-line-height;
+  color: $text-h4-color;
+}
+
+.h5 {
+  font-size: $text-h5-size;
+  font-weight: $text-h5-weight;
+  line-height: $text-h5-line-height;
+  color: $text-h5-color;
+}
+
+.body {
+  font-size: $text-body-size;
+  font-weight: $text-body-weight;
+  line-height: $text-body-line-height;
+  color: $text-body-color;
 }
 
 .muted {
-  color: $color-body-placeholder;
+  color: $color-neutral-placeholder;
+}
+
+.bold {
+  font-weight: $font-weight-bold;
+}
+
+.nowrap {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

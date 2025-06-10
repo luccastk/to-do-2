@@ -1,19 +1,23 @@
 @use "../../styles/tokens" as *;
 
-.button {
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: $spacing-3;
-  padding: $spacing-1 $spacing-2;
-  border-radius: $radius-sm;
-  background-color: #ed9;
+.default {
+  position: relative;
+  padding: $spacing-small $spacing-large;
+  font-size: $font-size-small;
+  font-weight: $font-weight-semi-bold;
+  line-height: $font-line-height-small;
+  color: $color-neutral-950;
+  border-radius: $radius-md;
+  border: 1px solid $outlined-border;
 }
 
-.left {
-  margin-left: auto;
+.save {
+  background-color: $color-yellow-500;
+  border: transparent;
 }
 
-.right {
-  margin-right: auto;
+.loading {
+  transition: all 0.1s ease-in;
+  cursor: default;
+  color: rgba(0, 0, 0, 0);
 }

@@ -1,0 +1,26 @@
+@use "../../styles/tokens" as *;
+
+.container {
+  display: flex;
+  position: absolute;
+  transform: translate(-50%);
+  left: 50%;
+}
+
+.loader {
+  border: 1px solid transparent;
+  border-top: 1px solid #000;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

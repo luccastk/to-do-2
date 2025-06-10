@@ -1,37 +1,34 @@
+import clsx from "clsx";
 import React from "react";
+import type { JSX } from "react/jsx-runtime";
 import styles from "./Typography.module.scss";
 import type { TypographyProps } from "./Typography.types";
-import {
-  generateUtilityClass,
-  generateUtilityClasses,
-} from "../../utils/getStyles";
 
-// interface Typography {
-//   h1: string;
-//   body: string;
-//   nowrap: string;
-// }
-
-// type TypographyClassKey = keyof Typography;
-
-// function getTypographyClass(slot: string) {
-//   return generateUtilityClass("typography", slot);
-// }
-
-export default function Typography({
+export default function Typography<T extends keyof JSX.IntrinsicElements>({
   children,
-  variant = "root",
-  component = "span",
+  variant,
+  as,
   muted,
+  bold,
+  nowrap,
   className,
-}: TypographyProps) {
-  // const classes: Typography = generateUtilityClasses("typography", [
-  //   "body",
-  //   "h1",
-  //   "nowrap",
-  // ]);
-
-  // console.log(getTypographyClass("h1"));
-
-  return React.createElement(component, children);
+  ...rest
+}: React.PropsWithChildren<TypographyProps<T>>) {
+  const Component = as || "span";
+  return React.createElement(
+    Component,
+    {
+      className: clsx(
+        [styles[variant ?? "inherit"]],
+        {
+          [styles.muted]: muted,
+          [styles.bold]: bold,
+          [styles.nowrap]: nowrap,
+        },
+        className
+      ),
+      ...rest,
+    },
+    children
+  );
 }

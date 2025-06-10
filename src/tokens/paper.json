@@ -1,0 +1,16 @@
+{
+  "paper": {
+    "default": {
+      "color": {
+        "$type": "color",
+        "$value": "#F4F4F4"
+      }
+    },
+    "shadow": {
+      "default": {
+        "$type": "boxShadow",
+        "$value": "-3px 12px 59px -7px rgba(0, 0, 0, 0.75)"
+      }
+    }
+  }
+}

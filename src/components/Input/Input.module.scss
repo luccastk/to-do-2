@@ -4,21 +4,21 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: $spacing-4;
-  padding: $spacing-3 $spacing-5;
-  border: 1px solid $color-background-tertiary;
+  gap: $spacing-medium;
+  padding: $spacing-small $spacing-small;
+  border: 1px solid $color-neutral-900;
   border-radius: $radius-md;
 }
 
 .font {
   width: 100%;
-  font-size: $size-font-text;
-  font-weight: $weight-400;
-  line-height: $line-height-text;
-  color: $color-body-text;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-normal;
+  line-height: $font-line-height-medium;
+  color: $color-neutral-950;
 }
 
 .label {
   position: absolute;
-  color: $color-body-placeholder;
+  color: $color-neutral-placeholder;
 }

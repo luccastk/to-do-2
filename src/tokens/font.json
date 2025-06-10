@@ -90,7 +90,7 @@
         "$value": "#444444"
       }
     },
-    "text": {
+    "body": {
       "size": {
         "$type": "fontSize",
         "$value": "1rem"

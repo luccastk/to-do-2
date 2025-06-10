@@ -1,34 +1,36 @@
 {
   "color": {
-    "background": {
-      "primary": { "value": "#fafafa" },
-      "secundary": { "value": "#f4f4f4" },
-      "tertiary": { "value": "#ebebeb" }
+    "neutral": {
+      "0": { "$value": "#ffffff" },
+      "50": { "$value": "#fafafa" },
+      "100": { "$value": "#f4f4f4" },
+      "200": { "$value": "#ebebeb" },
+      "900": { "$value": "#212529" },
+      "950": { "$value": "#444444" },
+      "placeholder": { "$value": "#7c7c7c" }
     },
-    "body": {
-      "title": { "value": "#212529" },
-      "text": { "value": "#444444" },
-      "placeholder": { "value": "#7c7c7c" }
+    "black": {
+      "1000": { "$value": "#000000" }
     },
     "pink": {
-      "0": { "value": "#ff6b6b" }
+      "500": { "$value": "#ff6b6b" }
     },
     "purple": {
-      "0": { "value": "#da77f2" },
-      "1": { "value": "#9775fa" }
+      "400": { "$value": "#da77f2" },
+      "500": { "$value": "#9775fa" }
     },
     "blue": {
-      "0": { "value": "#5c7cfa" },
-      "1": { "value": "#66d9e8" }
+      "400": { "$value": "#66d9e8" },
+      "500": { "$value": "#5c7cfa" }
     },
     "green": {
-      "0": { "value": "#8ce99a" }
+      "500": { "$value": "#8ce99a" }
     },
     "yellow": {
-      "0": { "value": "#ffd43b" }
+      "500": { "$value": "#ffd43b" }
     },
     "orange": {
-      "0": { "value": "#ff922b" }
+      "500": { "$value": "#ff922b" }
     }
   }
 }

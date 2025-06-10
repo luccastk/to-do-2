@@ -1,13 +1,12 @@
 import type { JSX } from "react/jsx-runtime";
-import type { TypographyClass } from "./typography";
 
-type Color = "primary" | "secundary";
+type Variants = "inherit" | "body" | "h1" | "h2" | "h3" | "h4" | "h5";
 
-export type TypographyProps = {
-  children?: React.ReactNode;
-  variant?:   TypographyClass;
-  color?: Color;
+export type TypographyProps<T extends keyof JSX.IntrinsicElements> = {
+  as?: T;
+  variant?: Variants;
   muted?: boolean;
-  component?: keyof JSX.IntrinsicElements;
+  bold?: boolean;
+  nowrap?: boolean;
   className?: string;
-};
+} & React.ComponentProps<T>;

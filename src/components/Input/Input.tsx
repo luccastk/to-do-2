@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Icon from "../Icon/Icon";
 import styles from "./Input.module.scss";
 import type { InputProps } from "./Input.types";
@@ -11,17 +12,12 @@ export default function Input({
   className,
   ...rest
 }: InputProps) {
-  const stylesContainer: string[] = [styles.container];
-  const stylesLabel: string[] = [styles.font, styles.label];
-
-  if (className) stylesContainer.push(className);
-
   return (
-    <div className={stylesContainer.join(" ")}>
+    <div className={clsx(styles.container, className)}>
       {positionIcon === "left" && icon ? <Icon icon={icon} /> : ""}
       <div>
         {value.trim() === "" ? (
-          <label htmlFor={id} className={stylesLabel.join(" ")}>
+          <label htmlFor={id} className={clsx(styles.font, styles.label)}>
             {placeholder}
           </label>
         ) : (

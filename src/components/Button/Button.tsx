@@ -1,29 +1,35 @@
-import Icon from "../Icon/Icon";
+import clsx from "clsx";
 import styles from "./Button.module.scss";
 import type { ButtonProps } from "./Button.types";
 
 export default function Button({
-  icon,
-  position = "default",
+  label,
+  loading,
+  variant = "default",
   className,
   onClick,
-  children,
   ...rest
-}: React.PropsWithChildren<ButtonProps>) {
+}: ButtonProps) {
   function handleClick(e: React.MouseEvent) {
     e.stopPropagation();
     onClick();
   }
 
-  const classNames: string[] = [styles.button];
-
-  if (position !== "default") classNames.push(styles[`${position}`]);
-  if (className) classNames.push(className);
-
   return (
-    <button {...rest} onClick={handleClick} className={classNames.join(" ")}>
-      <Icon icon={icon} />
-      {children}
+    <button
+      disabled={loading}
+      className={clsx(
+        styles.default,
+        {
+          [styles.save]: variant !== "default",
+          [styles.loading]: loading,
+        },
+        className
+      )}
+      onClick={handleClick}
+      {...rest}
+    >
+      {label}
     </button>
   );
 }
