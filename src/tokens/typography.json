@@ -1,38 +1,68 @@
 {
-  "size": {
-    "font": {
-      "text": { "value": "1rem" },
-      "title": {
-        "0": { "value": "3rem" },
-        "1": { "value": "2.5rem" }
-      },
-      "subtitle": {
-        "0": { "value": "1.5rem" },
-        "1": { "value": "0.75rem" }
-      }
-    }
-  },
-  "line": {
-    "height": {
-      "text": { "value": "1.5rem" },
-      "title": {
-        "0": { "value": "3.5rem" },
-        "1": { "value": "3rem" }
-      },
-      "subtitle": {
-        "0": { "value": "2rem" },
-        "1": { "value": "1rem" }
-      }
-    }
-  },
-  "weight": {
-    "400": { "value": "400" },
-    "600": { "value": "600" },
-    "700": { "value": "700" }
-  },
   "font": {
-    "familly": {
-      "default": { "value": "'Lexend Deca', sans-serif" }
+    "size": {
+      "extreme-small": {
+        "$type": "fontSize",
+        "$value": "0.75rem"
+      },
+      "small": {
+        "$type": "fontSize",
+        "$value": "1rem"
+      },
+      "medium": {
+        "$type": "fontSize",
+        "$value": "1.5rem"
+      },
+      "large": {
+        "$type": "fontSize",
+        "$value": "2.5rem"
+      },
+      "extreme-large": {
+        "$type": "fontSize",
+        "$value": "3rem"
+      }
+    },
+    "lineHeight": {
+      "extreme-small": {
+        "$type": "lineHeight",
+        "$value": "1rem"
+      },
+      "small": {
+        "$type": "lineHeight",
+        "$value": "1.5rem"
+      },
+      "medium": {
+        "$type": "lineHeight",
+        "$value": "2rem"
+      },
+      "large": {
+        "$type": "lineHeight",
+        "$value": "3rem"
+      },
+      "extreme-large": {
+        "$type": "lineHeight",
+        "$value": "3.5rem"
+      }
+    },
+    "weight": {
+      "normal": {
+        "$type": "fontWeight",
+        "$value": "400"
+      },
+      "semi-bold": {
+        "$type": "fontWeight",
+        "$value": "600"
+      },
+      "bold": {
+        "$type": "fontWeight",
+        "$value": "700"
+      }
+    },
+    "family": {
+      "default": {
+        "$type": "fontFamily",
+        "$value": "Lexend Deca, sans-serif"
+      }
     }
   }
 }

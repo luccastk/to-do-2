@@ -1,0 +1,112 @@
+{
+  "text": {
+    "h1": {
+      "size": {
+        "$type": "fontSize",
+        "$value": "3rem"
+      },
+      "lineHeight": {
+        "$type": "lineHeight",
+        "$value": "3.5rem"
+      },
+      "weight": {
+        "$type": "fontWeight",
+        "$value": "600"
+      },
+      "color": {
+        "$type": "color",
+        "$value": "#212529"
+      }
+    },
+    "h2": {
+      "size": {
+        "$type": "fontSize",
+        "$value": "2.5rem"
+      },
+      "lineHeight": {
+        "$type": "lineHeight",
+        "$value": "3rem"
+      },
+      "weight": {
+        "$type": "fontWeight",
+        "$value": "400"
+      },
+      "color": {
+        "$type": "color",
+        "$value": "#212529"
+      }
+    },
+    "h3": {
+      "size": {
+        "$type": "fontSize",
+        "$value": "1.5rem"
+      },
+      "lineHeight": {
+        "$type": "lineHeight",
+        "$value": "2rem"
+      },
+      "weight": {
+        "$type": "fontWeight",
+        "$value": "600"
+      },
+      "color": {
+        "$type": "color",
+        "$value": "#444444"
+      }
+    },
+    "h4": {
+      "size": {
+        "$type": "fontSize",
+        "$value": "0.875rem"
+      },
+      "lineHeight": {
+        "$type": "lineHeight",
+        "$value": "1.125rem"
+      },
+      "weight": {
+        "$type": "fontWeight",
+        "$value": "400"
+      },
+      "color": {
+        "$type": "color",
+        "$value": "#444444"
+      }
+    },
+    "h5": {
+      "size": {
+        "$type": "fontSize",
+        "$value": "0.75rem"
+      },
+      "lineHeight": {
+        "$type": "lineHeight",
+        "$value": "1rem"
+      },
+      "weight": {
+        "$type": "fontWeight",
+        "$value": "600"
+      },
+      "color": {
+        "$type": "color",
+        "$value": "#444444"
+      }
+    },
+    "text": {
+      "size": {
+        "$type": "fontSize",
+        "$value": "1rem"
+      },
+      "lineHeight": {
+        "$type": "lineHeight",
+        "$value": "1.5rem"
+      },
+      "weight": {
+        "$type": "fontWeight",
+        "$value": "400"
+      },
+      "color": {
+        "$type": "color",
+        "$value": "#444444"
+      }
+    }
+  }
+}

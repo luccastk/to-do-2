@@ -1,11 +1,28 @@
 {
   "spacing": {
-    "0": { "value": "0rem" },
-    "1": { "value": "0.25rem" },
-    "2": { "value": "0.5rem" },
-    "3": { "value": "0.75rem" },
-    "4": { "value": "1rem" },
-    "5": { "value": "1.25rem" },
-    "6": { "value": "1.5rem" }
+    "none": {
+      "$type": "dimension",
+      "$value": { "value": 0, "unit": "rem" }
+    },
+    "extreme-small": {
+      "$type": "dimension",
+      "$value": { "value": 0.25, "unit": "rem" }
+    },
+    "small": {
+      "$type": "dimension",
+      "$value": { "value": 0.5, "unit": "rem" }
+    },
+    "medium": {
+      "$type": "dimension",
+      "$value": { "value": 0.75, "unit": "rem" }
+    },
+    "large": {
+      "$type": "dimension",
+      "$value": { "value": 1, "unit": "rem" }
+    },
+    "extreme-large": {
+      "$type": "dimension",
+      "$value": { "value": 1.5, "unit": "rem" }
+    }
   }
 }
