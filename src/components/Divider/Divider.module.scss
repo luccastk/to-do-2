@@ -1,23 +1,23 @@
-// @use "../../styles/tokens" as *;
+@use "../../styles/tokens" as *;
 
-// .middle {
-//   margin-left: $spacing-4;
-//   margin-right: $spacing-4;
-// }
+.middle {
+  margin-left: $spacing-medium;
+  margin-right: $spacing-medium;
+}
 
-// .default {
-//   min-width: 0;
-//   margin-top: $spacing-1;
-//   margin-bottom: $spacing-1;
-//   border: 1px solid $color-background-tertiary;
-// }
+.default {
+  min-width: 0;
+  margin-top: $spacing-medium;
+  margin-bottom: $spacing-medium;
+  border: 1px solid $color-neutral-200;
+}
 
-// .vertical {
-//   width: 1px;
-//   height: 100%;
+.vertical {
+  width: 1px;
+  height: 100%;
 
-//   &__middle {
-//     margin-top: $spacing-2;
-//     margin-bottom: $spacing-2;
-//   }
-// }
+  &__middle {
+    margin-top: $spacing-medium;
+    margin-bottom: $spacing-medium;
+  }
+}

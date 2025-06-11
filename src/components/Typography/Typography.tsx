@@ -1,24 +1,22 @@
 import clsx from "clsx";
 import React from "react";
-import type { JSX } from "react/jsx-runtime";
 import styles from "./Typography.module.scss";
 import type { TypographyProps } from "./Typography.types";
 
-export default function Typography<T extends keyof JSX.IntrinsicElements>({
+export default function Typography<T extends React.ElementType = "span">({
   children,
   variant,
-  as,
+  component,
   muted,
   bold,
   nowrap,
   className,
   ...rest
-}: React.ComponentPropsWithRef<React.PropsWithChildren<TypographyProps<T>>>) {
-  const Component = as || "span";
-  return React.createElement(
-    Component,
-    {
-      className: clsx(
+}: TypographyProps<T>) {
+  const Component = component || "span";
+  return (
+    <Component
+      className={clsx(
         [styles[variant ?? "inherit"]],
         {
           [styles.muted]: muted,
@@ -26,9 +24,10 @@ export default function Typography<T extends keyof JSX.IntrinsicElements>({
           [styles.nowrap]: nowrap,
         },
         className
-      ),
-      ...rest,
-    },
-    children
+      )}
+      {...rest}
+    >
+      {children}
+    </Component>
   );
 }

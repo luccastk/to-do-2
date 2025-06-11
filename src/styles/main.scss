@@ -65,7 +65,8 @@ body {
 
 .container {
   height: 100vh;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   padding: $spacing-small 0;
   overflow: hidden;
 }

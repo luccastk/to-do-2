@@ -28,8 +28,8 @@ export default function Input({
           id={id}
           name={id}
           value={value}
-          {...rest}
           className={styles.font}
+          {...rest}
         />
       </div>
       {positionIcon === "right" && icon ? <Icon icon={icon} /> : ""}

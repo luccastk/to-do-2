@@ -2,16 +2,20 @@ import React from "react";
 import styles from "./Checkbox.module.scss";
 
 type CheckboxProps = {
-  handleChange: () => void;
+  handleChange: (e: boolean) => void;
 } & React.ComponentProps<"input">;
 
 const Checkbox = ({
   handleChange,
   children,
 }: React.PropsWithChildren<CheckboxProps>) => {
-  function onChange(e: React.MouseEvent) {
-    e.stopPropagation();
-    handleChange();
+
+  function onClick(e: React.MouseEvent) {
+    e.stopPropagation()
+  }
+
+  function onChange(e: React.ChangeEvent<HTMLInputElement>) {
+    handleChange(e.currentTarget.checked)
   }
 
   return (
@@ -20,6 +24,7 @@ const Checkbox = ({
         <input
           type="checkbox"
           className={styles.checkbox}
+          onClick={onClick}
           onChange={onChange}
         />
         <span className={styles.checkmark}></span>

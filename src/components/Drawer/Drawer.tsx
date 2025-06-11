@@ -1,22 +1,14 @@
+import clsx from "clsx";
 import styles from "./Drawer.module.scss";
+import type { DrawerProps } from "./Drawer.types";
 
-type Width = "default" | "medium";
-
-type DrawerProps = {
-  active?: boolean;
-  width?: Width;
-};
-
-export default function Drawer({
-  active,
-  width,
-  children,
-}: React.PropsWithChildren<DrawerProps>) {
+export default function Drawer({ open, children, ...rest }: DrawerProps) {
   return (
     <div
-      className={`${styles.drawer} ${active ? "" : styles.close} ${
-        width === "medium" ? styles.medium : ""
-      }`}
+      className={clsx(styles.drawer, {
+        [styles["drawer--active"]]: open,
+      })}
+      {...rest}
     >
       {children}
     </div>

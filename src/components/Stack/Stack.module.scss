@@ -2,6 +2,9 @@
 
 .default {
   display: flex;
-  align-items: center;
-  gap: $spacing-large;
+  overflow: hidden;
+}
+
+.column {
+  flex-direction: column;
 }

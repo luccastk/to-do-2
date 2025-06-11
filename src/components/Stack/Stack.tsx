@@ -1,19 +1,27 @@
 import clsx from "clsx";
 import React from "react";
-import type { JSX } from "react/jsx-runtime";
 import styles from "./Stack.module.scss";
 import type { StackProps } from "./Stack.types";
 
-export default function Stack<T extends keyof JSX.IntrinsicElements>({
+export default function Stack<T extends React.ElementType = "div">({
   component,
-  spacing,
+  direction,
+  divider,
+  spacing = "1rem",
   children,
-}: React.PropsWithChildren<StackProps<T>>) {
+  ...rest
+}: StackProps<T>) {
   const Component = component || "div";
-  const classNames = clsx(styles.default, {});
-  return React.createElement(
-    Component,
-    { className: classNames, style: { gap: spacing } },
-    children
+  return (
+    <Component
+      className={clsx(styles.default, {
+        [styles.column]: direction === "column",
+      })}
+      style={{ gap: spacing }}
+      {...rest}
+    >
+      {children}
+      {divider ? divider : ""}
+    </Component>
   );
 }

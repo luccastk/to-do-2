@@ -1,5 +1,6 @@
-import styles from "./List.module.scss";
-
-export default function List({ children }: React.PropsWithChildren) {
-  return <ul className={styles.list}>{children}</ul>;
+export default function List({
+  children,
+  ...rest
+}: React.ComponentProps<"ul">) {
+  return <ul {...rest}>{children}</ul>;
 }

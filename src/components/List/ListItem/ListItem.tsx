@@ -1,25 +1,14 @@
-import type React from "react";
+import clsx from "clsx";
 import styles from "./ListItem.module.scss";
-
-type ListItemProps = {
-  active?: boolean;
-  primaryColor?: string;
-  secundaryColor?: string;
-} & React.ComponentProps<"li">;
+import type { ListItemProps } from "./ListItem.types";
 
 export default function ListItem({
-  active,
-  primaryColor,
-  secundaryColor,
+  className,
   children,
   ...rest
-}: React.PropsWithChildren<ListItemProps>) {
+}: ListItemProps) {
   return (
-    <li
-      style={{ backgroundColor: `${active ? primaryColor : secundaryColor}` }}
-      className={styles.item}
-      {...rest}
-    >
+    <li className={clsx(styles.item, className)} {...rest}>
       {children}
     </li>
   );

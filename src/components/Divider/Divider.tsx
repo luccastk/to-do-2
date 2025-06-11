@@ -13,7 +13,7 @@ export default function Divider<T extends keyof JSX.IntrinsicElements>({
   const Component = component || "hr";
 
   return React.createElement(Component, {
-    className: clsx(styles.defaultm, {
+    className: clsx(styles.default, {
       [styles.vertical]: direction !== "horinzotal",
       [styles.middle]: direction !== "vertical" && variant !== "full",
       [styles.vertical__middle]: variant !== "full",
