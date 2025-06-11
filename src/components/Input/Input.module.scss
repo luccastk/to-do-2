@@ -2,19 +2,19 @@
 
 .container {
   position: relative;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: $spacing-medium;
-  padding: $spacing-small $spacing-small;
-  border: 1px solid $color-neutral-900;
+  padding: $spacing-small $spacing-large;
+  border: 1px solid $color-neutral-200;
   border-radius: $radius-md;
 }
 
 .font {
   width: 100%;
-  font-size: $font-size-medium;
+  font-size: $font-size-small;
   font-weight: $font-weight-normal;
-  line-height: $font-line-height-medium;
+  line-height: $font-line-height-small;
   color: $color-neutral-950;
 }
 

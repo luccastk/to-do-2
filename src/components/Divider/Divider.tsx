@@ -1,24 +1,23 @@
+import clsx from "clsx";
 import React from "react";
-import type { DividerProps } from "./Divider.types";
+import type { JSX } from "react/jsx-runtime";
 import styles from "./Divider.module.scss";
+import type { DividerProps } from "./Divider.types";
 
-export default function Divider({
-  component = "hr",
-  direction = "default",
+export default function Divider<T extends keyof JSX.IntrinsicElements>({
+  component,
+  direction = "horinzotal",
   variant = "full",
   className,
-}: DividerProps) {
-  const classNames: string[] = [];
+}: DividerProps<T>) {
+  const Component = component || "hr";
 
-  if (direction !== "default") classNames.push(styles.vertical);
-  if (variant !== "full" && direction !== "vertical") {
-    classNames.push(styles.middle);
-  } else if (variant !== "full") {
-    classNames.push(styles.vertical__middle);
-  }
-  if (className) classNames.push(className);
-
-  return React.createElement(component, {
-    className: `${styles.default} ${classNames.join(" ")}`,
+  return React.createElement(Component, {
+    className: clsx(styles.defaultm, {
+      [styles.vertical]: direction !== "horinzotal",
+      [styles.middle]: direction !== "vertical" && variant !== "full",
+      [styles.vertical__middle]: variant !== "full",
+      className,
+    }),
   });
 }

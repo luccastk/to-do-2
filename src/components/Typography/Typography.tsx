@@ -13,7 +13,7 @@ export default function Typography<T extends keyof JSX.IntrinsicElements>({
   nowrap,
   className,
   ...rest
-}: React.PropsWithChildren<TypographyProps<T>>) {
+}: React.ComponentPropsWithRef<React.PropsWithChildren<TypographyProps<T>>>) {
   const Component = as || "span";
   return React.createElement(
     Component,

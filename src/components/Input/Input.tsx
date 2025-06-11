@@ -15,7 +15,7 @@ export default function Input({
   return (
     <div className={clsx(styles.container, className)}>
       {positionIcon === "left" && icon ? <Icon icon={icon} /> : ""}
-      <div>
+      <div style={{ width: "100%" }}>
         {value.trim() === "" ? (
           <label htmlFor={id} className={clsx(styles.font, styles.label)}>
             {placeholder}

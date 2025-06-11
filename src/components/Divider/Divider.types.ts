@@ -1,12 +1,12 @@
 import type { JSX } from "react/jsx-runtime";
 
-type Direction = "default" | "vertical";
+type Direction = "horinzotal" | "vertical";
 
 type Variant = "full" | "middle";
 
-export type DividerProps = {
+export type DividerProps<T extends keyof JSX.IntrinsicElements> = {
   direction?: Direction;
-  component?: keyof JSX.IntrinsicElements;
+  component?: T;
   variant?: Variant;
   className?: string;
-};
+} & React.ComponentProps<T>;
