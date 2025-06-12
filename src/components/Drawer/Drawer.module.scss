@@ -1,10 +1,11 @@
 .drawer {
   width: 0;
   display: flex;
-  padding: 1rem 0;
   flex-direction: column;
   background-color: #ed0;
   transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  padding: 1rem 0;
 
   &--active {
     padding: 1rem;

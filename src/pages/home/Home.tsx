@@ -77,7 +77,6 @@ export default function Home() {
         open={open}
         style={{
           marginLeft: "1.5rem",
-          borderRadius: ".5rem",
         }} >
         <Stack
           style={{
@@ -89,7 +88,7 @@ export default function Home() {
             Tasks:
           </Typography>
           <IconButton
-            icon={<IoClose size={"2rem"} />}
+            icon={<IoClose size={"1.5rem"} />}
             onClick={() => setOpen((prev) => !prev)}
           />
         </Stack>

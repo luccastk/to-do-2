@@ -6,7 +6,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="body">
-        <div className="container">
+        <div className="">
           <Sidebar />
           <Routes>
             <Route path="/" element={<Home />} />

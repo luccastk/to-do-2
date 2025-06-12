@@ -1,10 +1,13 @@
+import type { RecipeVariants } from "@vanilla-extract/recipes";
 import type React from "react";
+import { typography } from "../../styles/typography.css";
 
-type Variants = "inherit" | "body" | "h1" | "h2" | "h3" | "h4" | "h5";
+type TypographyVariants = RecipeVariants<typeof typography>;
 
 export type TypographyProps<T extends React.ElementType = "span"> = {
   component?: T;
-  variant?: Variants;
+  variant?: TypographyVariants["variant"];
+  color: TypographyVariants["color"];
   muted?: boolean;
   bold?: boolean;
   nowrap?: boolean;
